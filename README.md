@@ -154,25 +154,25 @@ Web Service, REST API, Python Data Manipulation
 - sudo apt install python3-pip
 - pip install cmapPy
 
-	import os
-	import pandas as pd
-	from cmapPy.pandasGEXpress.GCToo import GCToo
-	from cmapPy.pandasGEXpress.write_gct import write as gct_write
+		import os
+		import pandas as pd
+		from cmapPy.pandasGEXpress.GCToo import GCToo
+		from cmapPy.pandasGEXpress.write_gct import write as gct_write
+
+		# Init file with absolute path
+		gz = 'TCGA.GBM.sampleMap_HiSeqV2.gz'
+		gct = 'TCGA.GBM.sampleMap_HiSeqV2.gct'
+
+		# Read tsv by pandas, for handling a huge file
+		row = pd.read_csv(gz, compression='gzip',header=1, sep='\t', quotechar='"')
+
+		# Remove destination file gct if exists 	
+		if os.path.exists(gct):
+		    os.remove(gct)
 	
-	# Init file with absolute path
-	gz = 'TCGA.GBM.sampleMap_HiSeqV2.gz'
-	gct = 'TCGA.GBM.sampleMap_HiSeqV2.gct'
-	
-	# Read tsv by pandas, for handling a huge file
-	row = pd.read_csv(gz, compression='gzip',header=1, sep='\t', quotechar='"')
-	
-	# Remove destination file gct if exists 	
-	if os.path.exists(gct):
-	    os.remove(gct)
-	
-	# Generate GCToo object from row(pandas.dataFrame)
-	gctoo_object = GCToo(row.copy(deep=True))
-	
-	# Write gct file
-	gct_write(gctoo_object, gct)
+		# Generate GCToo object from row(pandas.dataFrame)
+		gctoo_object = GCToo(row.copy(deep=True))
+
+		# Write gct file
+		gct_write(gctoo_object, gct)
 
