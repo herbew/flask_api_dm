@@ -42,6 +42,7 @@ Web Service, REST API, Python Data Manipulation
    res = requests.get("http://192.168.0.172:8080/api/dm/json/list")
    res.json()
    {
+	   
 	   'object_list': [{'contribution': 'record data',
 			   'name': 'COBOL',
 			   'publication_year': 1960},
@@ -69,6 +70,7 @@ Web Service, REST API, Python Data Manipulation
    )
    
    {
+	   
 	   'object_list': [{'contribution': 'record data',
 		   'name': 'COBOL',
 		   'publication_year': 1960},
@@ -100,6 +102,7 @@ Web Service, REST API, Python Data Manipulation
    )
    
    {
+	   
 	   'object_list': [{'contribution': 'record data',
 		   'name': 'COBOL',
 		   'publication_year': 1960},
@@ -129,6 +132,7 @@ Web Service, REST API, Python Data Manipulation
    res.json()
 	
    {
+		
 		'object_list': [{'contribution': 'record data',
 			   'name': 'COBOL',
 			   'publication_year': 1960},
@@ -141,6 +145,7 @@ Web Service, REST API, Python Data Manipulation
 			  {'contribution': 'modern unary, binary, and assignment operator syntax expectations',
 			   'name': 'Pascal',
 			   'publication_year': 1970}],
-	 	'success': True
+	 	
+		'success': True
    }
  
