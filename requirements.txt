@@ -1,0 +1,8 @@
+# Common requirements used across local dev and production
+flask
+flask-cors
+
+
+
+
+

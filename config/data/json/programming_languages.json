@@ -1,0 +1,24 @@
+{
+	"programming_languages" : [
+		{
+			"contribution": "record data",
+			"name": "COBOL",
+			"publication_year": 1960
+		},
+		{
+			"contribution": "array processing",
+			"name": "APL",
+			"publication_year": 1962
+		},
+		{
+			"contribution": "runtime interpretation, office tooling",
+			"name": "BASIC",
+			"publication_year": 1964
+		},
+		{
+			"contribution": "modern unary, binary, and assignment operator syntax expectations",
+			"name": "Pascal",
+			"publication_year": 1970
+		}
+	]
+}
